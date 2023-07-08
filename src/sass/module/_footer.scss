@@ -1,0 +1,135 @@
+@use "global" as *;
+
+.footer {
+  background-color: $greenaccent;
+  padding: rem(48) 0 rem(56);
+  @include mq(md) {
+    padding: rem(80) 0 ;
+  }
+}
+
+.footer__inner {
+  max-width: rem(630);
+  width: 100%;
+  margin-inline: auto;
+  padding: 0 15px;
+  @include mq(md) {
+  max-width: rem(1120);
+  padding: 0 20px;
+  }
+}
+
+.footer__heading {
+  @include mq(md) {
+    display: flex;
+    align-items: flex-end;
+  }
+}
+
+.footer__logo {
+  width: rem(120);
+  height: rem(45);
+  @include mq(md) {
+    width: rem(200);
+    height: rem(75);
+  }
+}
+
+.footer__sns {
+  display: flex;
+  margin-top: rem(10);
+  @include mq(md) {
+    margin-top: 0;
+    margin-left: rem(35);
+  }
+}
+
+.footer__sns-icon {
+  padding-top: rem(8);
+  padding-right: rem(8);
+  padding-bottom: rem(8);
+  padding-left: rem(2);
+  @include mq(md) {
+    padding-left: rem(8);
+  }
+}
+
+.footer__sns-icon:not(:first-child) {
+  margin-left: rem(10);
+  @include mq(md) {
+    margin-left: rem(6);
+  }
+}
+
+.footer__sns-link {
+  display: block;
+  width: rem(20);
+  aspect-ratio: 1/1;
+  @include mq(md) {
+    width: rem(26);
+  }
+}
+
+.footer__sns-link img {
+  width: 100%;
+  object-fit: cover;
+}
+
+.footer__nav {
+  margin-top: rem(34);
+  @include mq(md) {
+    margin-top: rem(24);
+  }
+}
+
+.common-nav__inner.footer__nav-inner {
+  max-width: rem(448);
+  margin-inline: auto;
+  @include mq(md) {
+    max-width: 100%;
+  }
+}
+
+.footer__nav-lists {
+  justify-content: center;
+  @include mq(md){
+    justify-content: flex-start;
+  }
+}
+
+
+.footer__nav-list:not(:first-child) {
+  padding-right: rem(11);
+  margin-left: auto;
+  @include mq(md) {
+    margin-left: 0;
+    padding-left: 0;
+  }
+}
+
+.common-nav__parts--title.footer__nav-parts--interval1 {
+  @include mq(md) {
+    margin-bottom: 0;
+  }
+}
+
+.common-nav__parts--title.footer__nav-parts--interval2 {
+  @include mq(md) {
+    margin-bottom: rem(12);
+  }
+}
+
+.footer__copyright {
+  font-family: $second-font-family;
+  font-size: rem(12);
+  color: $white;
+  font-weight: $normal;
+  line-height: lheight(18,12);
+  text-align: center;
+  margin-top: rem(19);
+  @include mq(md) {
+    font-size: rem(14);
+    line-height: lheight(18,14);
+    margin-top: rem(70);
+  }
+}

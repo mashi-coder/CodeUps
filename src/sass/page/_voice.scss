@@ -1,0 +1,39 @@
+@use "global" as *;
+
+.voice__inner {
+  max-width: rem(630);
+  padding: 0 rem(15);
+  margin-inline: auto;
+  @include mq(md) {
+    max-width: rem(1120);
+    padding: 0 rem(20);
+  }
+}
+
+.voice__cards {
+  display: flex;
+  flex-direction: column;
+  margin-top: rem(43);
+  @include mq(md) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-top: rem(30);
+    gap: rem(40);
+  }
+}
+
+.voice__card:not(:first-child) {
+  margin-top: rem(40);
+  @include mq(md) {
+    margin-top: 0;
+  }
+}
+
+.voice__btn {
+  text-align: center;
+  margin-top: rem(39);
+  margin-left: rem(-2);
+  @include mq(md) {
+    margin-top: rem(80);
+  }
+}

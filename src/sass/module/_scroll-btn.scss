@@ -1,0 +1,48 @@
+@use "global" as *;
+
+.scroll-btn {
+  position: sticky;
+  width: rem(48);
+  height: rem(48);
+  z-index: 999;
+  margin-left: auto;
+  right: rem(15);
+  bottom: rem(15);
+  margin-bottom: rem(16);
+  transform: rotate(-90deg);
+  @include mq(md) {
+    width: rem(80);
+    height: rem(80);
+    margin-bottom: rem(20);
+    right: rem(20);
+    bottom: rem(20);
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+.scroll-btn__inner {
+  width: 100%;
+  height: 100%;
+  border: 1px solid $greenaccent;
+  border-radius: 50%;
+  cursor: pointer;
+  position: relative;
+}
+// 矢印右向き
+.scroll-btn__arrow {
+  display: inline-block;
+  position: absolute;
+  content: "";
+  top: calc(50% - rem(2));
+  left: 50%;
+  border-bottom: 1px solid $greenaccent;
+  border-right: 1px solid $greenaccent;
+  width: rem(28);
+  height: rem(6);
+  transform: skew(45deg) translate(-50%,-50%);
+  @include mq(md) {
+    width: rem(40);
+    height: rem(6);
+  }
+}

@@ -1,0 +1,48 @@
+@use "global" as *;
+
+.swiper-button-prev::after,
+.swiper-button-next::after {
+  bottom: 0;
+  content: "";
+  height: 0;
+  margin: auto;
+  position: absolute;
+  top: 0;
+  width: 0;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  width: rem(80);
+  height: rem(80);
+  border: 1px solid $greenaccent;
+  border-radius: 50%;
+  cursor: pointer;
+  position: relative;
+  margin: 0;
+}
+
+.swiper-button-next {
+  margin-left: rem(100);
+}
+
+.swiper-button-prev::after,
+.swiper-button-next::after {
+  display: inline-block;
+  position: absolute;
+  content: "";
+  top: rem(3);
+  left: 50%;
+  border-bottom: 1px solid $greenaccent;
+  border-right: 1px solid $greenaccent;
+  width: rem(40);
+  height: rem(6);
+}
+
+.swiper-button-next::after {
+  transform: skew(45deg) translate(-50%,-50%);
+}
+
+.swiper-button-prev::after {
+  transform: skew(-45deg) scaleX(-1) translate(50%,-50%);
+}

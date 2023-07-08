@@ -1,0 +1,107 @@
+@use "global" as *;
+
+.common-nav__lists {
+  display: flex;
+  width: 100%;
+  @include mq(md) {
+    gap: 0 rem(120);
+  }
+}
+
+.common-nav__list-block {
+  display: grid;
+  grid-template-columns: 1fr;
+  row-gap: rem(37);
+  @include mq(md) {
+    display: flex;
+    gap: 0 rem(118);
+  }
+}
+
+.common-nav__list-outline {
+  display: grid;
+  grid-template-columns: 1fr;
+  row-gap: rem(19);
+  @include mq(md) {
+    row-gap: rem(19);
+  }
+}
+
+.common-nav__parts {
+  padding-left: rem(22);
+  transition: opacity .3s;
+}
+
+.common-nav__parts a {
+  @include mq (md) {
+    margin-left: rem(-1);
+  }
+}
+
+.common-nav__parts a:hover {
+  opacity: .7;
+}
+
+.common-nav__parts:first-child {
+  margin-bottom: rem(21);
+}
+
+.common-nav__parts:first-child.common-nav__parts--mb {
+  margin-bottom: rem(-2);
+}
+
+.common-nav__parts:not(:first-child) {
+  margin-top: rem(18);
+  margin-left: rem(2);
+}
+
+.common-nav__parts--title {
+  font-size: rem(16);
+  color: $white;
+  font-weight: $bold;
+  line-height: lheight(18,16);
+  position: relative;
+}
+
+.common-nav__parts--title::before {
+  position: absolute;
+  content: "";
+  display: inline-block;
+  width: rem(18);
+  height: rem(18);
+  background-image: url("../../assets/images/common/starfish.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  top: 0;
+  left: 0;
+}
+
+.common-nav__list a {
+  font-size: rem(16);
+  color: $white;
+  line-height: lheight(18,16);
+}
+
+.common-nav__list {
+  box-sizing: content-box;
+}
+
+.common-nav__list.common-nav__list--interval1 {
+  margin-top: rem(10);
+  @include mq(md) {
+    margin-top: rem(6);
+  }
+}
+
+.common-nav__list.common-nav__list--interval2 {
+  padding-top: rem(10);
+  @include mq(md) {
+    margin-top: rem(-2);
+  }
+}
+
+.common-nav__line-forPC {
+  @include mq(md) {
+    display: none;
+  }
+}

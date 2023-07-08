@@ -1,0 +1,50 @@
+@use "global" as *;
+
+.campaign {
+  position: relative;
+  width: 100%;
+  padding-bottom: rem(10);
+}
+
+.campaign__inner {
+  width: min(rem(630), 100%);
+  padding: 0 10px;
+  margin-inline: auto;
+  @include mq(md) {
+    width: min(rem(1120), 100%);
+    padding: 0 17px;
+  }
+}
+
+.campaign__wrap {
+  margin-right: calc(50% - 50vw);
+  @include mq(md) {
+  }
+}
+
+.campaign__cards {
+  margin-top: rem(24);
+  @include mq(md) {
+    margin-top: rem(37);
+    position: relative;
+  }
+}
+
+.campaign__pagenation-btn {
+  display: none;
+  @include mq(md) {
+    position: absolute;
+    display: flex;
+    top: rem(2);
+    right: 11.8%;
+  }
+}
+
+.campaign__btn {
+  text-align: center;
+  margin-top: rem(37);
+  margin-left: rem(-4);
+  @include mq(md) {
+    margin-top: rem(77);
+  }
+}

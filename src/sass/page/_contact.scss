@@ -1,0 +1,45 @@
+@use "global" as *;
+
+.contact__inner {
+  width: min(rem(630), 100%);
+  padding: 0 15px;
+  margin-inline: auto;
+  @include mq(md) {
+    max-width: rem(1120);
+    width: min(rem(1120), 100%);
+    padding: 0 20px;
+  }
+}
+
+.contact__contents {
+  @include mq(md) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    box-shadow: 4px 4px 10px 0px rgba(0, 0, 0, 0.25);
+    padding: rem(80) 0;
+  }
+}
+
+.contact__info-block {
+  @include mq(md) {
+    border-right: 1px solid $greenaccent;
+    padding-right: rem(20);
+    padding-left: rem(20);
+    margin-inline: auto;
+  }
+}
+
+.contact__reservation-block {
+  margin-top: rem(40);
+  @include mq(md) {
+    margin-top: 0;
+    padding-right: rem(112);
+    padding-left: rem(81);
+  }
+}
+
+.section-header__subtitle.contact__subtitle {
+  margin-top: rem(-7);
+}

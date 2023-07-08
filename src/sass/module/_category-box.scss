@@ -1,0 +1,22 @@
+@use "global" as *;
+
+.category-box {
+  font-size: rem(12);
+  color: $greenaccent;
+  line-height: lheight(22,12);
+  border: 1px solid $greenaccent;
+  padding: rem(5.5) rem(11);
+  transition: opacity .3s;
+  @include mq(md) {
+    padding: rem(7.5) rem(15);
+  }
+}
+
+.category-box:hover {
+  opacity: 0.8;
+}
+
+.card__category a {
+  display: inline-block;
+  height: inherit;
+}

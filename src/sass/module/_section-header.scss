@@ -1,0 +1,44 @@
+@use "global" as *;
+
+.section-header {
+  text-align: center;
+}
+
+.section-header__title {
+  font-family: $second-font-family;
+  font-size: rem(32);
+  font-weight: $normal;
+  color: $green;
+  line-height: lheight(40,32);
+  @include mq(md) {
+    font-size: rem(40);
+    line-height: 1;
+  }
+}
+
+.section-header__word-capitalize {
+  text-transform: capitalize;
+}
+
+.section-header__title::first-letter {
+  color: $greenaccent;
+}
+
+.section-header__subtitle {
+  font-size: rem(12);
+  color: $greenaccent;
+  line-height: lheight(18,12);
+  margin-top: rem(4);
+  @include mq(md) {
+    margin-top: rem(8);
+  }
+}
+
+.section-header__title.section-header__title--l-font {
+  font-size: rem(80);
+  line-height: lheight(80,80);
+}
+
+.section-header__subtitle.section-header__subtitle--mt0 {
+  margin-top: 0;
+}

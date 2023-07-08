@@ -1,0 +1,71 @@
+@use "global" as *;
+
+.header {
+  position: fixed;
+  z-index: 200;
+  width: 100%;
+  background-color: rgba(13, 41, 54, .68);
+  height: rem(80);
+  @include mq(md) {
+    height: rem(90);
+  }
+}
+
+.header__inner {
+  display: flex;
+  align-items: center;
+  height: inherit;
+  margin: 0 rem(15);
+  @include mq(md) {
+    margin-left: rem(40);
+    margin-right: rem(20)
+  }
+}
+
+.header__logo {
+  width: rem(102);
+  height: rem(38);
+  position: relative;
+  z-index: 999;
+  @include mq(md) {
+    width: rem(133);
+    height: rem(50);
+  }
+}
+
+.header__logo img {
+  width: 100%;
+  height: 100%;
+}
+
+.header__sp-nav {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity .5s, visibility .5s;
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  background-color: $greenaccent;
+  padding-top: rem(104);
+}
+
+.header__sp-nav.js-drawer {
+  opacity: 1;
+  visibility: visible;
+}
+
+.header__drawer-inner {
+  width: min(rem(630), 100%);
+  margin-inline: auto;
+  padding-right: rem(34);
+  padding-left: rem(15);
+}
+
+.header-nav__lists {
+  justify-content: space-between;
+  width: min(rem(400), 100%);
+  margin-inline: auto;
+}

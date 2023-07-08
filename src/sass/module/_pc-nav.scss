@@ -1,0 +1,72 @@
+@use "global" as *;
+
+.pc-nav {
+  display: none;
+  @include mq(md) {
+    display: block;
+    height: inherit;
+    margin-left: auto;
+    padding-right: rem(1);
+    padding-top: rem(1);
+  }
+}
+
+.pc-nav__lists {
+  display: flex;
+  height: inherit;
+}
+
+.pc-nav__list {
+  text-align: center;
+  height: inherit;
+}
+
+.pc-nav__link {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: inherit;
+  padding: 0 rem(20);
+  position: relative;
+}
+
+.pc-nav__link::after {
+  display: inline-block;
+  position: absolute;
+  content: "";
+  width: calc(100% - rem(40));
+  height: rem(1);
+  background-color: $white;
+  top: rem(70);
+  margin-inline: auto;
+  transform: scaleX(0);
+  transition: transform .3s;
+}
+
+.pc-nav__link:hover::after {
+  transform: scaleX(1);
+}
+
+.pc-nav__list-title {
+  font-family: $second-font-family;
+  font-size: rem(18);
+  color: $white;
+  line-height: 1;
+}
+
+.pc-nav__list--word-capitalize {
+  text-transform: capitalize;
+}
+
+.pc-nav__list-title--uppercase {
+  text-transform: uppercase;
+}
+
+.pc-nav__list-subtitle {
+  font-size: rem(10);
+  color: $white;
+  line-height: lheight(15,10);
+  margin-top: rem(4);
+  word-break: keep-all;
+}
+

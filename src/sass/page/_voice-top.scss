@@ -1,0 +1,46 @@
+@use "global" as *;
+
+.voice-top {
+  padding-top: rem(84);
+  @include mq(md){
+    padding-top: 0;
+  }
+}
+
+.voice-top__inner {
+  @include mq(md) {
+    max-width: rem(1280);
+    width: 100%;
+    margin-inline: auto;
+    padding: 0 20px;
+  }
+}
+
+.voice-top__wrap {
+  @include mq(md) {
+    padding-top: rem(143);
+    position: relative;
+  }
+}
+
+.voice-top__image {
+  display: none;
+  @include mq(md) {
+    display: block;
+    max-width: rem(301);
+    width: 100%;
+    aspect-ratio: 301/138;
+    position: absolute;
+    top: rem(3);
+    left: 0;
+    z-index: 1;
+    padding-top: rem(20);
+  }
+}
+
+.voice-top__image img {
+  @include mq(md) {
+    width: 100%;
+    object-fit: cover;
+  }
+}

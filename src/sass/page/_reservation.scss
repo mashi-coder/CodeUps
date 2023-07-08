@@ -1,0 +1,19 @@
+@use "global" as *;
+
+.reservation__text-block {
+  text-align: center;
+  margin-top: rem(8);
+}
+
+.reservation__text {
+  font-size: rem(14);
+  color: $greenaccent;
+  font-weight: $normal;
+  line-height: lheight(18,14);
+}
+
+.reservation__btn {
+  text-align: center;
+  margin-top: rem(40);
+  margin-left: rem(-2);
+}

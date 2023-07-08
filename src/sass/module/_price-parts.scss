@@ -1,0 +1,34 @@
+@use "global" as *;
+
+.price-parts {
+  display: flex;
+}
+
+.price-parts__title,
+.price-parts__cost {
+  font-size: rem(14);
+  color: $green;
+  font-weight: $normal;
+  line-height: lheight(24,14);
+  @include mq(md) {
+    font-size: rem(16);
+    line-height: lheight(24,16);
+  }
+}
+
+.price-parts__title {
+  max-width: 73.33333%;
+  width: 100%;
+  @include mq(md) {
+    max-width: 79.67479%;
+  }
+}
+
+.price-parts__cost {
+  max-width: 26.66666%;
+  width: 100%;
+  text-align: right;
+  @include mq(md) {
+    max-width: 20.3252%;
+  }
+}

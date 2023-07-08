@@ -1,0 +1,55 @@
+@use "global" as *;
+
+.hamburger {
+  width: rem(39);
+  height: rem(24);
+  margin-left: auto;
+  position: absolute;
+  z-index: 999;
+  right: rem(8);
+  @include mq(md) {
+    display: none;
+  }
+}
+
+.hamburger span {
+  width: 84%;
+  height: rem(1);
+  background-color: $white;
+  position: absolute;
+  content: "";
+  display: block;
+  transition: transform .5s, opacity .5s, visibility .5s, background-color .5s;
+}
+
+.hamburger.is-click span {
+  width: 100%;
+}
+
+// 初期状態
+.hamburger span:nth-child(1) {
+  top: 0;
+}
+
+.hamburger span:nth-child(2) {
+  top: rem(12);
+}
+
+.hamburger span:nth-child(3) {
+  top: rem(24);
+}
+// 動作時
+.hamburger.is-click span:nth-child(1) {
+  transform: translate(rem(-3), rem(12)) rotate(37deg);
+  background-color: $white;
+}
+
+.hamburger.is-click span:nth-child(2) {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.hamburger.is-click span:nth-child(3) {
+  transform: translate(rem(-3), rem(-12)) rotate(-37deg);
+  background-color: $white;
+}

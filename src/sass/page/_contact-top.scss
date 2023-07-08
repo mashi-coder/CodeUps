@@ -1,0 +1,57 @@
+@use "global" as *;
+
+.contact-top {
+  position: relative;
+  z-index: 1;
+  padding-top: rem(80);
+  @include mq(md) {
+    padding-top: rem(140);
+    // position: relative;
+    // z-index: 1;
+  }
+}
+
+.contact-top__wrap {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  z-index: 1;
+}
+
+.contact-top__inner {
+  max-width: rem(375);
+  width: 100%;
+  padding: 0 rem(15);
+  margin-inline: auto;
+  @include mq(md) {
+    max-width: rem(1380);
+    padding: 0 rem(20);
+  }
+}
+
+.contact-top__img-wrap {
+  position: relative;
+}
+
+.contact-top__img {
+  max-width: rem(109);
+  width: 100%;
+  aspect-ratio: 109/50;
+  transform: scaleX(-1);
+  position: absolute;
+  // 画像の位置変更
+  top: rem(54);
+  right: 0;
+  z-index: 1;
+  @include mq(md) {
+    max-width: rem(301);
+    aspect-ratio: 301/138;
+    top: rem(100);
+  }
+}
+
+.contact-top__img img {
+  width: 100%;
+  object-fit: cover;
+}
