@@ -4,11 +4,14 @@
   position: relative;
   z-index: 1;
   background-color: #DDF0F1;
+}
+
+.price--layout {
   padding-top: rem(80);
   padding-bottom: rem(84);
   @include mq(md) {
     padding-top: rem(100);
-    padding-bottom: rem(104);
+    padding-bottom: rem(102);
   }
 }
 
@@ -19,6 +22,24 @@
   @include mq(md) {
     width: min(rem(1120), 100%);
     padding: 0 20px;
+    position: relative;
+  }
+}
+
+.price__inner::before {
+  display: none;
+  @include mq(md) {
+    display: block;
+    width: rem(437);
+    background-image: url("../../assets/images/common/fish-green_large.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    aspect-ratio: 437/201;
+    position: absolute;
+    content: "";
+    bottom: rem(-40);
+    right: min(57.41vw, rem(744));
+    z-index: 1;
   }
 }
 
@@ -40,20 +61,20 @@
 
 .price__image {
   width: 100%;
-  aspect-ratio: 345/227;
   position: relative;
   @include mq(md) {
     margin-left: rem(94);
-    width: rem(492);
-    height: rem(746);
-    aspect-ratio: 746/492;
   }
 }
 
 .price__image img {
+  aspect-ratio: 345/227;
   width: 100%;
   height: 100%;
   object-fit: cover;
+  @include mq(md) {
+    aspect-ratio: 492/746;
+  }
 }
 
 .price__btn {

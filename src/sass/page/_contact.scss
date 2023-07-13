@@ -1,9 +1,17 @@
 @use "global" as *;
 
+.contact--layout {
+  padding: rem(80) 0 rem(40);
+  @include mq(md) {
+    padding: rem(140) 0 rem(58);
+  }
+}
+
 .contact__inner {
   width: min(rem(630), 100%);
   padding: 0 15px;
   margin-inline: auto;
+  position: relative;
   @include mq(md) {
     max-width: rem(1120);
     width: min(rem(1120), 100%);
@@ -11,32 +19,62 @@
   }
 }
 
-.contact__contents {
+.contact__inner::before {
+  display: block;
+  width: rem(109);
+  background-image: url("../../assets/images/common/fish-image_small.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  transform: scaleX(-1);
+  aspect-ratio: 109/50;
+  position: absolute;
+  content: "";
+  top: rem(-25);
+  right: rem(15);
+  z-index: 1;
   @include mq(md) {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
+    width: rem(301);
+    aspect-ratio: 301/138;
+    top: rem(-40);
+    left: min(69.75vw, rem(928));
+  }
+}
+
+.contact__wrap {
+  @include mq(md) {
     box-shadow: 4px 4px 10px 0px rgba(0, 0, 0, 0.25);
     padding: rem(80) 0;
   }
 }
 
-.contact__info-block {
+.contact__contents {
   @include mq(md) {
-    border-right: 1px solid $greenaccent;
-    padding-right: rem(20);
-    padding-left: rem(20);
-    margin-inline: auto;
+    display: flex;
+    justify-content: space-between;
+    margin-left: rem(50);
+    margin-right: rem(112);
+    position: relative;
   }
 }
 
-.contact__reservation-block {
+.contact__contents::after {
+  @include mq(md) {
+    position: absolute;
+    content: "";
+    display: inline-block;
+    width: rem(1);
+    height: 100%;
+    background-color: $greenaccent;
+    top: 0;
+    left: 57%;
+  }
+}
+
+.contact__content-reservation {
   margin-top: rem(40);
   @include mq(md) {
     margin-top: 0;
-    padding-right: rem(112);
-    padding-left: rem(81);
+    padding-top: rem(20);
   }
 }
 

@@ -64,17 +64,19 @@ document.addEventListener('DOMContentLoaded',function() {
 
   var hamburger_btn = document.querySelector('.hamburger');
   var hamburger_bars = document.querySelector('.hamburger span');
-  var drawer_menu = document.querySelector('.header__sp-nav');
+  var drawer_menu = document.querySelector('.drawer-nav');
 
   hamburger_btn.addEventListener('click',function(){
     if(hamburger_btn.classList.contains('is-click')) {
       this.classList.remove('is-click');
       hamburger_bars.classList.remove('is-click');
       drawer_menu.classList.remove('js-drawer');
+      document.body.classList.remove('js-fixed');
     } else {
       this.classList.add('is-click');
       hamburger_bars.classList.add('is-click');
       drawer_menu.classList.add('js-drawer');
+      document.body.classList.add('js-fixed');
     }
   });
 
@@ -100,10 +102,10 @@ document.addEventListener('DOMContentLoaded',function() {
   });
 
   openingAnimeTL
-  .fromTo(openingTargetTitle,{autoAlpha:1},{autoAlpha:0,delay:1,duration:1,ease:'power2.out'})
-  .to(openingTargetLeft,{y:'-100%',delay:1,duration:1.2,ease:'power2.out'})
-  .to(openingTargetRight,{y:'-100%',duration:1.2,ease:'power2.out'},"<")
-  .fromTo(mvTargetTitle,{autoAlpha:0},{autoAlpha:1,delay:1,duration:1,ease:'power2.out'})
+  .fromTo(openingTargetTitle,{autoAlpha:1},{autoAlpha:0,delay:.7,duration:.7})
+  .to(openingTargetLeft,{y:'-100%',duration:1.2,ease:'power2.out'})
+  .to(openingTargetRight,{y:'-100%',duration:1.2,ease:'power2.out'},"<=")
+  .fromTo(mvTargetTitle,{autoAlpha:0},{autoAlpha:1,duration:1,},'<=.8')
   .fromTo(slideheader,{y:'-100%'},{y:"0%",duration:1,ease:'power2.out'},"<")
 
 
@@ -123,8 +125,8 @@ document.addEventListener('DOMContentLoaded',function() {
   });
 
   const swiper_campaign = new Swiper(".js-swiper-campaign", {
-  spaceBetween: 20,
-  slidesPerView: 1.25,
+    spaceBetween: 20,
+    slidesPerView: 1.25,
     autoplay: true,
     loop: true,
     loopAdditionalSlides: 1,
@@ -149,6 +151,19 @@ document.addEventListener('DOMContentLoaded',function() {
   });
 });
 
+window.addEventListener('load',function(){
+  setTimeout(function() {
+    const target = document.querySelector('.campaign__wrap');
+    const inner_Width = window.innerWidth;
+    const client_Width = document.body.clientWidth;
+    console.log(client_Width);
+    console.log(inner_Width);
+    if (inner_Width !== client_Width) {
+      target.style.setProperty('--scroll-bar-width', `${inner_Width - client_Width}px`);
+    }
+  }, 4000);
+});
+
 window.addEventListener("scroll", function(){
   const scrollTop = window.pageYOffset;
   if(scrollTop > 80) {
@@ -157,6 +172,3 @@ window.addEventListener("scroll", function(){
     gsap.to('.scroll-btn',{autoAlpha:0,duration:.5});
   }
 });
-
-
-

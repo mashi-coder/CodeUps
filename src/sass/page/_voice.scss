@@ -1,5 +1,14 @@
 @use "global" as *;
 
+.voice--layout {
+  padding-top: rem(84);
+  padding-bottom: rem(85);
+  @include mq(md){
+    padding-top: rem(143);
+    padding-bottom: rem(144);
+  }
+}
+
 .voice__inner {
   max-width: rem(630);
   padding: 0 rem(15);
@@ -7,13 +16,48 @@
   @include mq(md) {
     max-width: rem(1120);
     padding: 0 rem(20);
+    position: relative;
+  }
+}
+
+.voice__inner::before {
+  display: none;
+  @include mq(md) {
+    display: block;
+    width: rem(301);
+    background-image: url("../../assets/images/common/fish-image_small.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    aspect-ratio: 301/138;
+    position: absolute;
+    content: "";
+    top: rem(-120);
+    right: min(71.25vw, rem(880));
+    z-index: 1;
+  }
+}
+
+.voice__inner::after {
+  display: none;
+  @include mq(md) {
+    display: block;
+    width: rem(71);
+    background-image: url("../../assets/images/common/voice-rightBottom_image.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    aspect-ratio: 71/162;
+    position: absolute;
+    content: "";
+    bottom: rem(-71);
+    right: rem(20);
+    z-index: 1;
   }
 }
 
 .voice__cards {
   display: flex;
   flex-direction: column;
-  margin-top: rem(43);
+  margin-top: rem(44);
   @include mq(md) {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -23,7 +67,7 @@
 }
 
 .voice__card:not(:first-child) {
-  margin-top: rem(40);
+  margin-top: rem(37);
   @include mq(md) {
     margin-top: 0;
   }

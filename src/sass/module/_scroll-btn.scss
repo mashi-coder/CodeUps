@@ -10,14 +10,14 @@
   bottom: rem(15);
   margin-bottom: rem(16);
   transform: rotate(-90deg);
+  opacity: 0;
+  visibility: hidden;
   @include mq(md) {
     width: rem(80);
     height: rem(80);
     margin-bottom: rem(20);
     right: rem(20);
     bottom: rem(20);
-    opacity: 0;
-    visibility: hidden;
   }
 }
 
@@ -28,6 +28,7 @@
   border-radius: 50%;
   cursor: pointer;
   position: relative;
+  background-color: $white;
 }
 // 矢印右向き
 .scroll-btn__arrow {

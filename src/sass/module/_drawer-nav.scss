@@ -1,0 +1,97 @@
+@use "global" as *;
+
+.drawer-nav {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: $greenaccent;
+  gap: rem(18);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity .5s, visibility .5s;
+  z-index: 998;
+  overflow: scroll;
+  @include mq(md) {
+    display: none;
+  }
+}
+
+.drawer-nav.js-drawer {
+  opacity: 1;
+  visibility: visible;
+}
+
+.drawer-nav__inner {
+  max-width: rem(430);
+  padding: 0 rem(15);
+  margin-inline: auto;
+}
+
+.header__logo.header__logo--drawer {
+  margin-top: rem(21);
+}
+
+.drawer-nav__items {
+  padding-top: rem(32);
+  display: flex;
+  justify-content: space-between;
+}
+
+.drawer-nav__items:not(:first-child) {
+  margin-left: auto;
+  padding-right: rem(11);
+}
+
+.drawer-nav__item {
+  display: flex;
+  flex-direction: column;
+}
+
+.drawer-nav__item:not(:first-child) {
+  margin-left: rem(7);
+  margin-right: rem(10);
+}
+
+.drawer-nav__lists {
+  margin-bottom: rem(16);
+}
+
+.drawer-nav__list {
+  padding-left: rem(22);
+}
+
+.drawer-nav__list.drawer-nav__list--mark {
+  font-weight: $bold;
+  line-height: lheight(18,16);
+  position: relative;
+}
+
+.drawer-nav__list.drawer-nav__list--mark::before {
+  position: absolute;
+  content: "";
+  display: inline-block;
+  width: rem(18);
+  height: rem(18);
+  background-image: url("../../assets/images/common/starfish.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  top: rem(12);
+  left: 0;
+}
+
+.drawer-nav__list a {
+  padding: rem(12) 0;
+  display: block;
+  font-size: rem(16);
+  color: $white;
+  font-weight: $normal;
+  line-height: lheight(18,16);
+  transition: opacity .3s;
+}
+
+.drawer-nav__list a:hover {
+  opacity: 0.8;
+}

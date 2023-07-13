@@ -20,6 +20,9 @@
 
 .opening-image__mask {
   position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
 }
 
 .opening-image__mask-left {
@@ -30,7 +33,7 @@
   width: 50%;
   height: 100vh;
   background-color: $white;
-  transform: translateY(0%); //0 → -100%
+  transform: translateY(0%);
   z-index: 300;
 }
 
@@ -42,7 +45,7 @@
   width: 50%;
   height: calc(100vh + rem(80));
   background-color: $white;
-  transform: translateY(0%); //0 → -100%
+  transform: translateY(0%);
   z-index: 300;
 }
 

@@ -7,7 +7,7 @@
 
 .mv__img {
   aspect-ratio: 375/667;
-  width: 100%;
+  width: 100vw;
   height: 100vh;
   @include mq(md) {
     aspect-ratio: 1440/768;
@@ -21,34 +21,35 @@
 }
 
 .mv__header {
-  width: rem(248);
+  width: 100%;
   position: absolute;
   content: "";
   top: 49.9%;
-  left: 50%;
-  transform: translate(-50%,-50%);
+  transform: translateY(-50%);
   z-index: 1;
   padding-right: rem(1);
+  text-align: center;
   @include mq(md) {
-    width: 100%;
-    left: 50%;
     top: 55.5%;
+    padding-right: 0;
   }
 }
 
 .mv__title {
+  display: inline-block;
   font-family: $unique-font-family;
   font-size: rem(40);
+  color: $greenaccent;
   color: $white;
   font-weight: 400;
   line-height: lheight(100,80);
   letter-spacing: 0.53em;
+  text-indent: 0.53em;
   text-align: center;
   text-transform: uppercase;
   @include mq(md) {
     font-size: rem(80);
     line-height: lheight(100,80);
-    margin-left: rem(43);
   }
 }
 

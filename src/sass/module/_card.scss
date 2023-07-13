@@ -19,26 +19,26 @@
 
 .card__contents {
   width: 100%;
+  height: 100%;
   box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.25);
   @include mq(md) {
     width: 100%;
+    height: 100%;
   }
 }
 
 .card__image {
-  aspect-ratio: 280/188;
   width: 100%;
-  height: 67.14285%;
-  @include mq(md) {
-    aspect-ratio: 333/223;
-    height: 66.96696%;
-  }
 }
 
 .card__image img {
+  aspect-ratio: 280/188;
   width: 100%;
   height: 100%;
   object-fit: cover;
+  @include mq(md) {
+    aspect-ratio: 333/223;
+  }
 }
 
 .card__content {
@@ -53,6 +53,17 @@
     padding-top: rem(24);
     padding-bottom: rem(8);
     margin-top: rem(3);
+  }
+}
+
+.card__category {
+  margin-right: auto;
+  border: 1px solid $greenaccent;
+  padding: rem(4) rem(11) rem(6) rem(12);
+  @include mq(md) {
+    margin-top: rem(2);
+    margin-left: auto;
+    margin-right: 0;
   }
 }
 
@@ -119,7 +130,7 @@
 .card__text--small::before {
   position: absolute;
   content: "";
-  width: 102%;
+  width: 100%;
   height: rem(3);
   top: 49.3%;
   left: 0;
