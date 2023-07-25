@@ -1,8 +1,7 @@
 @use "global" as *;
 
-.mv__swiper {
+.mv {
   position: relative;
-  z-index: -1;
 }
 
 .mv__img {
@@ -64,5 +63,3 @@
     margin-top: rem(-1);
   }
 }
-
-

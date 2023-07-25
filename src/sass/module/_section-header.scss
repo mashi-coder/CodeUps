@@ -16,12 +16,20 @@
   }
 }
 
-.section-header__word-capitalize {
-  text-transform: capitalize;
-}
-
 .section-header__title::first-letter {
   color: $greenaccent;
+}
+
+.section-header__title.section-header__title--color {
+  @include mq(md) {
+    color: $white;
+  }
+}
+
+.section-header__title.section-header__title--color::first-letter {
+  @include mq(md) {
+    color: #DDF0F1;
+  }
 }
 
 .section-header__subtitle {
@@ -41,4 +49,10 @@
 
 .section-header__subtitle.section-header__subtitle--mt0 {
   margin-top: 0;
+}
+
+.section-header__subtitle.section-header__subtitle--color {
+  @include mq(md) {
+    color: $white;
+  }
 }

@@ -2,31 +2,11 @@
 
 .about {
   @include mq(md) {
-
-  }
-}
-
-.about--layout {
-  padding-top: rem(75);
-  padding-bottom: rem(83);
-  @include mq(md) {
-    padding-top: rem(132);
-    padding-bottom: rem(142);
-  }
-}
-
-.about__inner {
-  width: min(rem(630), 100%);
-  padding: 0 15px;
-  margin-inline: auto;
-  @include mq(md) {
-    width: min(rem(1120), 100%);
-    padding: 0 20px;
     position: relative;
   }
 }
 
-.about__inner::after {
+.about::after {
   display: none;
   @include mq(md) {
     content:"";
@@ -38,10 +18,21 @@
     aspect-ratio: 194/181;
     height: rem(181);
     position: absolute;
-    left: min(80vw, rem(1000));
+    right: calc(50% - min(rem(637),47.5%));
     bottom: rem(-93);
   }
 }
+
+.about__inner {
+  width: min(rem(630), 100%);
+  padding: 0 15px;
+  margin-inline: auto;
+  @include mq(md) {
+    width: min(rem(1120), 100%);
+    padding: 0 20px;
+  }
+}
+
 
 .about__contents-block {
   position: relative;

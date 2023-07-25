@@ -151,18 +151,19 @@ document.addEventListener('DOMContentLoaded',function() {
   });
 });
 
-window.addEventListener('load',function(){
-  setTimeout(function() {
-    const target = document.querySelector('.campaign__wrap');
-    const inner_Width = window.innerWidth;
-    const client_Width = document.body.clientWidth;
-    console.log(client_Width);
-    console.log(inner_Width);
-    if (inner_Width !== client_Width) {
-      target.style.setProperty('--scroll-bar-width', `${inner_Width - client_Width}px`);
-    }
-  }, 4000);
-});
+// スクロールバー表示時の崩れを防止する
+// window.addEventListener('load',function(){
+//   setTimeout(function() {
+//     const target = document.querySelector('.campaign__wrap');
+//     const inner_Width = window.innerWidth;
+//     const client_Width = document.body.clientWidth;
+//     console.log(client_Width);
+//     console.log(inner_Width);
+//     if (inner_Width !== client_Width) {
+//       target.style.setProperty('--scroll-bar-width', `${inner_Width - client_Width}px`);
+//     }
+//   }, 4000);
+// });
 
 window.addEventListener("scroll", function(){
   const scrollTop = window.pageYOffset;

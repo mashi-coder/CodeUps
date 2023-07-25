@@ -32,12 +32,10 @@
 }
 
 .price-list__title {
+  font-size: rem(16);
+  color: $green;
   line-height: lheight(24,16);
-  @include mq(md) {
-    font-size: rem(16);
-    color: $green;
-    line-height: lheight(24,16);
-  }
+  border-bottom: 1px solid $greenaccent;
 }
 
 .content-header__title.price-list__title {

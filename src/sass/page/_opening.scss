@@ -52,6 +52,7 @@
 .opening__header {
   position: absolute;
   content: "";
+  width: 100%;
   top: 50%;
   left: 50%;
   transform: translate(-50%,-50%);
@@ -66,6 +67,7 @@
   font-weight: 400;
   line-height: lheight(100,80);
   letter-spacing: 0.54em;
+  text-indent: 0.54em;
   text-transform: uppercase;
   @include mq(md) {
     font-size: rem(80);

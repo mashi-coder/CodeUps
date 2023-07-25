@@ -1,12 +1,20 @@
 @use "global" as *;
 
 .category-box {
+  display: inline-block;
   font-size: rem(12);
   color: $greenaccent;
   line-height: lheight(22,12);
-  transition: opacity .3s;
+  border: 1px solid $greenaccent;
+  padding: rem(3) rem(12);
+  @include mq(md) {
+    padding: rem(4) rem(15) rem(6) rem(15);
+  }
 }
 
-.category-box:hover {
-  opacity: 0.8;
+.category-box.category-box--small {
+  padding: rem(3) rem(11) rem(3);
+  @include mq(md) {
+    padding: rem(3) rem(15) rem(4);
+  }
 }

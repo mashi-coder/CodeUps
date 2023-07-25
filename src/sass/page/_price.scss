@@ -6,15 +6,6 @@
   background-color: #DDF0F1;
 }
 
-.price--layout {
-  padding-top: rem(80);
-  padding-bottom: rem(84);
-  @include mq(md) {
-    padding-top: rem(100);
-    padding-bottom: rem(102);
-  }
-}
-
 .price__inner {
   width: min(rem(630), 100%);
   padding: 0 15px;

@@ -50,10 +50,8 @@
         <span></span>
       </div>
       <nav class="header__drawer drawer-nav">
+        <div class="drawer-nav__header"></div>
         <div class="drawer-nav__inner">
-          <div class="header__logo header__logo--drawer">
-            <img loading="lazy" src="./assets/images/common/logo.png" alt="CodeUps">
-          </div>
           <ul class="drawer-nav__items">
             <li class="drawer-nav__item">
               <ul class="drawer-nav__lists">
@@ -172,8 +170,8 @@
     </div>
   </header>
 
-  <section class="mv">
-    <div class="mv__inner">
+    <div class="mv__inner opening-image">
+      <section class="mv">
       <div class="mv__swiper swiper js-mv-swiper">
         <div class="swiper-wrapper">
           <picture class="swiper-slide mv__img">
@@ -207,28 +205,30 @@
     </div>
   </section>
 
-  <section class="campaign campaign--layout">
+  <section class="campaign campaign-layout">
     <div class="campaign__inner">
       <div class="campaign__title section-header">
-        <h2 class="section-header__title"><span class="section-header__word-capitalize">c</span>ampaign</h2>
+        <h2 class="section-header__title">Campaign</h2>
         <h3 class="section-header__subtitle">キャンペーン</h3>
       </div>
-      <div class="campaign__wrap">
-        <div class="campaign__cards swiper js-swiper-campaign">
-          <div class="swiper-wrapper">
-            <div class="swiper-slide swiper-slide--autoheight">
-              <div class="card">
+      <div class="campaign__cards swiper js-swiper-campaign">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <div class="card">
+              <a href="#" class="card__link">
                 <div class="card__contents">
-                    <figure class="card__image">
-                      <a href="#" class="card__link">
-                        <img loading="lazy" src="./assets/images/common/campaign_01.jpg" alt="ライセンス取得">
-                      </a>
-                    </figure>
+                  <figure class="card__image">
+                    <img loading="lazy" src="./assets/images/common/campaign_01.jpg" alt="ライセンス取得">
+                  </figure>
                   <div class="card__content">
                     <div class="card__header">
                       <div class="card__info">
-                        <span class="card__category category-box"><a href="#">ライセンス講習</a></span>
-                        <h3 class="card__title">ライセンス取得</h3>
+                        <div class="card__category">
+                          <span class="category-box">ライセンス講習</span>
+                        </div>
+                        <div class="card__title">
+                          <h3 class="card__title-text">ライセンス取得</h3>
+                        </div>
                       </div>
                     </div>
                     <div class="card__body">
@@ -240,21 +240,25 @@
                     </div>
                   </div>
                 </div>
-              </div>
+              </a>
             </div>
-            <div class="swiper-slide swiper-slide--autoheight">
-              <div class="card">
+          </div>
+          <div class="swiper-slide">
+            <div class="card">
+              <a href="#" class="card__link">
                 <div class="card__contents">
                   <figure class="card__image">
-                    <a href="#" class="card__link">
-                      <img loading="lazy" src="./assets/images/common/campaign_02.jpg" alt="体験ダイビング">
-                    </a>
+                    <img loading="lazy" src="./assets/images/common/campaign_02.jpg" alt="体験ダイビング">
                   </figure>
                   <div class="card__content">
                     <div class="card__header">
                       <div class="card__info">
-                        <span class="card__category category-box"><a href="#">体験ダイビング</a></span>
-                        <h3 class="card__title">貸切体験ダイビング</h3>
+                        <div class="card__category">
+                          <span class="category-box">体験ダイビング</span>
+                        </div>
+                        <div class="card__title">
+                          <h3 class="card__title-text">貸切体験ダイビング</h3>
+                        </div>
                       </div>
                     </div>
                     <div class="card__body">
@@ -266,21 +270,25 @@
                     </div>
                   </div>
                 </div>
-              </div>
+              </a>
             </div>
-            <div class="swiper-slide swiper-slide--autoheight">
-              <div class="card">
+          </div>
+          <div class="swiper-slide">
+            <div class="card">
+              <a href="#" class="card__link">
                 <div class="card__contents">
                   <figure class="card__image">
-                    <a href="#" class="card__link">
-                      <img loading="lazy" src="./assets/images/common/campaign_03.jpg" alt="体験ダイビング">
-                    </a>
+                    <img loading="lazy" src="./assets/images/common/campaign_03.jpg" alt="体験ダイビング">
                   </figure>
                   <div class="card__content">
                     <div class="card__header">
                       <div class="card__info">
-                        <span class="card__category category-box"><a href="#">体験ダイビング</a></span>
-                        <h3 class="card__title">ナイトダイビング</h3>
+                        <div class="card__category">
+                          <span class="category-box">体験ダイビング</span>
+                        </div>
+                        <div class="card__title">
+                          <h3 class="card__title-text">ナイトダイビング</h3>
+                        </div>
                       </div>
                     </div>
                     <div class="card__body">
@@ -292,21 +300,25 @@
                     </div>
                   </div>
                 </div>
-              </div>
+              </a>
             </div>
-            <div class="swiper-slide swiper-slide--autoheight">
-              <div class="card">
+          </div>
+          <div class="swiper-slide">
+            <div class="card">
+              <a href="#" class="card__link">
                 <div class="card__contents">
                   <figure class="card__image">
-                    <a href="#" class="card__link">
-                      <img loading="lazy" src="./assets/images/common/campaign_04.jpg" alt="ファンダイビング">
-                    </a>
+                    <img loading="lazy" src="./assets/images/common/campaign_04.jpg" alt="ファンダイビング">
                   </figure>
                   <div class="card__content">
                     <div class="card__header">
                       <div class="card__info">
-                        <span class="card__category category-box"><a href="#">ファンダイビング</a></span>
-                        <h3 class="card__title">貸切ファンダイビング</h3>
+                        <div class="card__category">
+                          <span class="category-box">ファンダイビング</span>
+                        </div>
+                        <div class="card__title">
+                          <h3 class="card__title-text">貸切ファンダイビング</h3>
+                        </div>
                       </div>
                     </div>
                     <div class="card__body">
@@ -318,21 +330,25 @@
                     </div>
                   </div>
                 </div>
-              </div>
+              </a>
             </div>
-            <div class="swiper-slide swiper-slide--autoheight">
-              <div class="card">
+          </div>
+          <div class="swiper-slide">
+            <div class="card">
+              <a href="#" class="card__link">
                 <div class="card__contents">
                   <figure class="card__image">
-                    <a href="#" class="card__link">
-                      <img loading="lazy" src="./assets/images/common/campaign_01.jpg" alt="ライセンス取得">
-                    </a>
+                    <img loading="lazy" src="./assets/images/common/campaign_01.jpg" alt="ライセンス取得">
                   </figure>
                   <div class="card__content">
                     <div class="card__header">
                       <div class="card__info">
-                        <span class="card__category category-box"><a href="#">ライセンス講習</a></span>
-                        <h3 class="card__title">ライセンス取得</h3>
+                        <div class="card__category">
+                          <span class="category-box">ライセンス講習</span>
+                        </div>
+                        <div class="card__title">
+                          <h3 class="card__title-text">ライセンス取得</h3>
+                        </div>
                       </div>
                     </div>
                     <div class="card__body">
@@ -344,21 +360,25 @@
                     </div>
                   </div>
                 </div>
-              </div>
+              </a>
             </div>
-            <div class="swiper-slide swiper-slide--autoheight">
-              <div class="card">
+          </div>
+          <div class="swiper-slide">
+            <div class="card">
+              <a href="#" class="card__link">
                 <div class="card__contents">
                   <figure class="card__image">
-                    <a href="#" class="card__link">
-                      <img loading="lazy" src="./assets/images/common/campaign_02.jpg" alt="体験ダイビング">
-                    </a>
+                    <img loading="lazy" src="./assets/images/common/campaign_02.jpg" alt="体験ダイビング">
                   </figure>
                   <div class="card__content">
                     <div class="card__header">
                       <div class="card__info">
-                        <span class="card__category category-box"><a href="#">体験ダイビング</a></span>
-                        <h3 class="card__title">貸切体験ダイビング</h3>
+                        <div class="card__category">
+                          <span class="category-box">体験ダイビング</span>
+                        </div>
+                        <div class="card__title">
+                          <h3 class="card__title-text">貸切体験ダイビング</h3>
+                        </div>
                       </div>
                     </div>
                     <div class="card__body">
@@ -370,21 +390,25 @@
                     </div>
                   </div>
                 </div>
-              </div>
+              </a>
             </div>
-            <div class="swiper-slide swiper-slide--autoheight">
-              <div class="card">
+          </div>
+          <div class="swiper-slide">
+            <div class="card">
+              <a href="#" class="card__link">
                 <div class="card__contents">
                   <figure class="card__image">
-                    <a href="#" class="card__link">
                       <img loading="lazy" src="./assets/images/common/campaign_03.jpg" alt="体験ダイビング">
-                    </a>
                   </figure>
                   <div class="card__content">
                     <div class="card__header">
                       <div class="card__info">
-                        <span class="card__category category-box"><a href="#">体験ダイビング</a></span>
-                        <h3 class="card__title">ナイトダイビング</h3>
+                        <div class="card__category">
+                          <span class="category-box">体験ダイビング</span>
+                        </div>
+                        <div class="card__title">
+                          <h3 class="card__title-text">ナイトダイビング</h3>
+                        </div>
                       </div>
                     </div>
                     <div class="card__body">
@@ -396,21 +420,25 @@
                     </div>
                   </div>
                 </div>
-              </div>
+              </a>
             </div>
-            <div class="swiper-slide swiper-slide--autoheight">
-              <div class="card">
+          </div>
+          <div class="swiper-slide">
+            <div class="card">
+              <a href="#" class="card__link">
                 <div class="card__contents">
                   <figure class="card__image">
-                    <a href="#" class="card__link">
-                      <img loading="lazy" src="./assets/images/common/campaign_04.jpg" alt="ファンダイビング">
-                    </a>
+                    <img loading="lazy" src="./assets/images/common/campaign_04.jpg" alt="ファンダイビング">
                   </figure>
                   <div class="card__content">
                     <div class="card__header">
                       <div class="card__info">
-                        <span class="card__category category-box"><a href="#">ファンダイビング</a></span>
-                        <h3 class="card__title">貸切ファンダイビング</h3>
+                        <div class="card__category">
+                          <span class="category-box">ファンダイビング</span>
+                        </div>
+                        <div class="card__title">
+                          <h3 class="card__title-text">貸切ファンダイビング</h3>
+                        </div>
                       </div>
                     </div>
                     <div class="card__body">
@@ -422,14 +450,14 @@
                     </div>
                   </div>
                 </div>
-              </div>
+              </a>
             </div>
           </div>
         </div>
-        <div class="campaign__pagenation-btn">
-          <div class="swiper-button-prev"></div>
-          <div class="swiper-button-next"></div>
-        </div>
+      </div>
+      <div class="campaign__pagenation-btn">
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
       </div>
       <div class="campaign__btn">
         <a class="btn" href="#"><span class="btn__first-word">view</span>&nbsp;more<span class="btn__arrow"></span></a>
@@ -437,10 +465,10 @@
     </div>
   </section>
 
-  <section class="about about--layout">
+  <section class="about about-layout">
     <div class="about__inner">
       <div class="about__title section-header">
-        <h2 class="section-header__title"><span class="section-header__word-capitalize">about</span>&nbsp;us</h2>
+        <h2 class="section-header__title">About&nbsp;us</h2>
         <h3 class="section-header__subtitle">私たちについて</h3>
       </div>
       <div class="about__contents-block">
@@ -455,7 +483,7 @@
           </div>
         </div>
         <div class="about__content-body about-content">
-          <div class="about-content__heading">
+          <div class="about-content__header">
             <h3 class="about-content__title">Dive into<br>the Ocean</h3>
           </div>
           <div class="about-content__body">
@@ -469,27 +497,25 @@
     </div>
   </section>
 
-  <section class="information">
+  <section class="information information-layout">
     <div class="information__inner">
       <div class="information__title section-header">
-        <h2 class="section-header__title"><span class="section-header__word-capitalize">i</span>nformation</h2>
+        <h2 class="section-header__title">Information</h2>
         <h3 class="section-header__subtitle">ダイビング情報</h3>
       </div>
-      <div class="information__content js-target">
-        <figure class="information__img js-effect">
+      <div class="information__content information-content js-target">
+        <figure class="information-content__img js-effect">
           <img loading="lazy" src="./assets/images/common/information-image_01.jpg" alt="ダイビング情報">
         </figure>
-        <div class="information__content-body">
-          <div class="iformation__block-title">
-            <h3 class="content-header__title information__content__title--font-s">ライセンス講習</h3>
-          </div>
-          <div class="infromation__text-block">
-            <p class="information__text">
+        <div class="information-content__body">
+          <h3 class="information-content__title">ライセンス講習</h3>
+          <div class="information-content__text-block">
+            <p class="information-content__text">
               当店はダイビングライセンス（Cカード）世界最大の教育機関PADIの「正規店」として店舗登録されています。<br>
               正規登録店として、安心安全に初めての方でも安心安全にライセンス取得をサポート致します。
             </p>
           </div>
-          <div class="information__btn js-btn-target">
+          <div class="information-content__btn js-btn-target">
             <a class="btn"><span class="btn__first-word">view</span>&nbsp;more<span class="btn__arrow"></span></a>
           </div>
         </div>
@@ -497,72 +523,66 @@
     </div>
   </section>
 
-  <section class="blog">
+  <section class="blog blog-layout">
     <div class="blog__inner">
       <div class="blog__title section-header">
-        <h2 class="section-header__title blog__title--color"><span class="section-header__word-capitalize">b</span>log</h2>
-        <h3 class="section-header__subtitle blog__subtitle--color">ブログ</h3>
+        <h2 class="section-header__title section-header__title--color">Blog</h2>
+        <h3 class="section-header__subtitle section-header__subtitle--color">ブログ</h3>
       </div>
       <div class="blog__cards">
         <div class="blog__card blog-card">
           <a href="#" class="blog-card__link">
-            <div class="blog-card__inner">
-              <figure class="blog-card__image">
-                <img loading="lazy" src="./assets/images/common/blog-card_01.jpg" alt="ライセンス取得">
-              </figure>
-              <div class="blog-card__body">
-                <div class="blog-card__header">
-                  <time class="blog-card__date" datetime="2023-11-17">2023.11/17</time>
-                  <h3 class="content-header__title blog-card__title">ライセンス取得</h3>
-                </div>
-                <div class="blog-card__text-block">
-                  <p class="blog-card__text">
-                    ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br>
-                    ここにテキストが入ります。ここにテキストが入ります。ここにテキスト
-                  </p>
-                </div>
+            <figure class="blog-card__image">
+              <img loading="lazy" src="./assets/images/common/blog-card_01.jpg" alt="ライセンス取得">
+            </figure>
+            <div class="blog-card__body">
+              <div class="blog-card__header">
+                <time class="blog-card__date" datetime="2023-11-17">2023.11/17</time>
+                <h3 class="blog-card__title">ライセンス取得</h3>
+              </div>
+              <div class="blog-card__text-block">
+                <p class="blog-card__text">
+                  ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br>
+                  ここにテキストが入ります。ここにテキストが入ります。ここにテキスト
+                </p>
               </div>
             </div>
           </a>
         </div>
         <div class="blog__card blog-card">
           <a href="#" class="blog-card__link">
-            <div class="blog-card__inner">
-              <figure class="blog-card__image">
-                <img loading="lazy" src="./assets/images/common/blog-card_02.jpg" alt="ウミガメと泳ぐ">
-              </figure>
-              <div class="blog-card__body">
-                <div class="blog-card__header">
-                  <time class="blog-card__date" datetime="2023-11-17">2023.11/17</time>
-                  <h3 class="content-header__title blog-card__title">ウミガメと泳ぐ</h3>
-                </div>
-                <div class="blog-card__text-block">
-                  <p class="blog-card__text">
-                    ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br>
-                    ここにテキストが入ります。ここにテキストが入ります。ここにテキスト
-                  </p>
-                </div>
+            <figure class="blog-card__image">
+              <img loading="lazy" src="./assets/images/common/blog-card_02.jpg" alt="ウミガメと泳ぐ">
+            </figure>
+            <div class="blog-card__body">
+              <div class="blog-card__header">
+                <time class="blog-card__date" datetime="2023-11-17">2023.11/17</time>
+                <h3 class="blog-card__title">ウミガメと泳ぐ</h3>
+              </div>
+              <div class="blog-card__text-block">
+                <p class="blog-card__text">
+                  ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br>
+                  ここにテキストが入ります。ここにテキストが入ります。ここにテキスト
+                </p>
               </div>
             </div>
           </a>
         </div>
         <div class="blog__card blog-card">
           <a href="#" class="blog-card__link">
-            <div class="blog-card__inner">
-              <figure class="blog-card__image">
-                <img loading="lazy" src="./assets/images/common/blog-card_03.jpg" alt="カクレクマノミ">
-              </figure>
-              <div class="blog-card__body">
-                <div class="blog-card__header">
-                  <time class="blog-card__date" datetime="2023-11-17">2023.11/17</time>
-                  <h3 class="content-header__title blog-card__title">カクレクマノミ</h3>
-                </div>
-                <div class="blog-card__text-block">
-                  <p class="blog-card__text">
-                    ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br>
-                    ここにテキストが入ります。ここにテキストが入ります。ここにテキスト
-                  </p>
-                </div>
+            <figure class="blog-card__image">
+              <img loading="lazy" src="./assets/images/common/blog-card_03.jpg" alt="カクレクマノミ">
+            </figure>
+            <div class="blog-card__body">
+              <div class="blog-card__header">
+                <time class="blog-card__date" datetime="2023-11-17">2023.11/17</time>
+                <h3 class="blog-card__title">カクレクマノミ</h3>
+              </div>
+              <div class="blog-card__text-block">
+                <p class="blog-card__text">
+                  ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br>
+                  ここにテキストが入ります。ここにテキストが入ります。ここにテキスト
+                </p>
               </div>
             </div>
           </a>
@@ -572,21 +592,12 @@
         <a class="btn" href="#"><span class="btn__first-word">view</span>&nbsp;more<span class="btn__arrow"></span></a>
       </div>
     </div>
-    <div class="blog__top-image leftside-image">
-      <div class="leftside-image__inner">
-        <div class="leftside-image__wrap">
-          <figure class="leftside-image__image">
-            <img loading="lazy" src="./assets/images/common/fish-image_large.png" alt="左向き魚群">
-          </figure>
-        </div>
-      </div>
-    </div>
   </section>
 
-  <section class="voice voice--layout">
+  <section class="voice voice-layout">
     <div class="voice__inner">
       <div class="voice__title section-header">
-        <h2 class="section-header__title"><span class="section-header__word-capitalize">v</span>oice</h2>
+        <h2 class="section-header__title">Voice</h2>
         <h3 class="section-header__subtitle">お客様の声</h3>
       </div>
       <div class="voice__cards">
@@ -597,10 +608,12 @@
                 <div class="voice-card__wrap">
                   <div class="voice-card__info">
                     <span class="voice-card__age">20代(女性)</span>
-                    <span class="voice-card__category"><a class="category-box" href="#">ライセンス講習</a></span>
+                    <div class="voice-card__category">
+                      <span class="category-box category-box--small">ライセンス講習</span>
+                    </div>
                   </div>
                   <div class="voice-card__title">
-                    <h3 class="content-header__title voice-card__title-text">ここにタイトルが入ります。ここにタイトル</h3>
+                    <h3 class="voice-card__title-text">ここにタイトルが入ります。ここにタイトル</h3>
                   </div>
                 </div>
                 <figure class="voice-card__image js-effect">
@@ -626,10 +639,12 @@
                 <div class="voice-card__wrap">
                   <div class="voice-card__info">
                     <span class="voice-card__age">20代(男性)</span>
-                    <span class="voice-card__category"><a class="category-box" href="#">ファンダイビング</a></span>
+                    <div class="voice-card__category">
+                      <span class="category-box category-box--small">ファンダイビング</span>
+                    </div>
                   </div>
                   <div class="voice-card__title">
-                    <h3 class="content-header__title voice-card__title-text">ここにタイトルが入ります。ここにタイトル</h3>
+                    <h3 class="voice-card__title-text">ここにタイトルが入ります。ここにタイトル</h3>
                   </div>
                 </div>
                 <figure class="voice-card__image js-effect">
@@ -655,10 +670,10 @@
     </div>
   </section>
 
-  <section class="price price--layout js-target">
+  <section class="price price-layout js-target">
     <div class="price__inner">
       <div class="price__title section-header">
-        <h2 class="section-header__title"><span class="section-header__word-capitalize">p</span>rice</h2>
+        <h2 class="section-header__title">Price</h2>
         <h3 class="section-header__subtitle">料金一覧</h3>
       </div>
       <div class="price__contents js-target">
@@ -755,7 +770,7 @@
     </div>
   </section>
 
-  <section class="contact contact--layout">
+  <section class="contact contact-layout">
     <div class="contact__inner">
       <div class="contact__wrap">
         <div class="contact__contents">
@@ -781,8 +796,8 @@
           </div>
           <div class="contact__content-reservation reservation">
             <div class="reservation__title section-header">
-              <h2 class="section-header__title section-header__title--l-font"><span class="section-header__word-capitalize">c</span>ontact</h2>
-              <h3 class="section-header__subtitle contact__subtitle">お問い合わせ</h3>
+              <h3 class="section-header__title section-header__title--l-font">Contact</h3>
+              <h4 class="section-header__subtitle contact__subtitle">お問い合わせ</h4>
             </div>
             <div class="reservation__text-block">
               <p class="reservation__text">ご予約・お問い合わせはコチラ</p>

@@ -24,6 +24,14 @@
   visibility: visible;
 }
 
+.drawer-nav__header {
+  position: fixed;
+  z-index: 999;
+  width: 100%;
+  height: rem(80);
+  background-color: $greenaccent;
+}
+
 .drawer-nav__inner {
   max-width: rem(430);
   padding: 0 rem(15);
@@ -35,7 +43,7 @@
 }
 
 .drawer-nav__items {
-  padding-top: rem(32);
+  padding-top: rem(80);
   display: flex;
   justify-content: space-between;
 }

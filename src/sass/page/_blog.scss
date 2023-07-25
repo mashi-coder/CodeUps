@@ -1,10 +1,25 @@
 @use "global" as *;
 
 .blog {
-  padding-top: rem(80);
   @include mq(md) {
-    padding-top: rem(100);
     position: relative;
+    z-index: 1;
+  }
+}
+
+.blog::before {
+  display: none;
+  @include mq(md) {
+    display: block;
+    width: rem(437);
+    background-image: url("../../assets/images/common/fish-image_large.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    aspect-ratio: 437/201;
+    position: absolute;
+    content: "";
+    top: rem(24);
+    left: calc(50% - min(rem(620),47.5%));
     z-index: 1;
   }
 }
@@ -25,6 +40,7 @@
   }
 }
 
+
 .blog__inner {
   width: min(rem(642), 100%);
   padding: 0 21px;
@@ -32,47 +48,12 @@
   @include mq(md) {
     width: min(rem(1120), 100%);
     padding: 0 20px;
-    position: relative;
   }
 }
 
-.blog__inner::after {
-  display: none;
-  @include mq(md) {
-    display: block;
-    width: rem(437);
-    background-image: url("../../assets/images/common/fish-image_large.png");
-    background-size: contain;
-    background-repeat: no-repeat;
-    aspect-ratio: 437/201;
-    position: absolute;
-    content: "";
-    top: rem(-75);
-    right: min(57vw, rem(744));
-    z-index: 1;
-  }
-}
 
 .blog__title {
   margin-left: rem(-1);
-}
-
-.section-header__title.blog__title--color {
-  @include mq(md) {
-    color: $white;
-  }
-}
-
-.section-header__title.blog__title--color::first-letter {
-  @include mq(md) {
-    color: #DDF0F1;
-  }
-}
-
-.section-header__subtitle.blog__subtitle--color {
-  @include mq(md) {
-    color: $white;
-  }
 }
 
 .blog__cards {
